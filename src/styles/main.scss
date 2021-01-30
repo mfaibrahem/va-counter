@@ -1,39 +1,44 @@
-.counter {
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+@import "./config";
 
-  > div:first-child {
-    font-size: 100px;
-  }
+@font-face {
+	font-family: "Gilroy-ExtraBold";
+	src: url(../assets/fonts/Gilroy-ExtraBold.woff) format("woff");
+}
 
-  a {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-  }
+@mixin headingFont-en {
+	font-family: "Gilroy-ExtraBold";
+}
 
-  .controls {
-    display: flex;
-    flex-direction: row-reverse;
+html {
+	scroll-behavior: smooth;
+	// direction: rtl;
+	// @include bodyFont-en;
+	@include headingFont-en;
+	button {
+		// @include bodyFont-en;
+		@include headingFont-en;
+	}
+}
 
-    > div {
-      min-width: 40px;
-      height: 40px;
-      text-align: center;
-      background: #fff;
-      color: #3f51b5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 0 0 5px;
-      cursor: pointer;
-    }
-  }
+body {
+	background-color: #f1f2f3;
+	@include customBrackPoint {
+		background-color: moccasin;
+	}
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.app {
+	min-height: 100vh;
+	background-color: #f5f5f5;
+	@include custom-scrollbar;
+
+	margin: 0;
+	padding: 0 !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@import "./css/fontello.css";
+	@import "./css/ionicons.css";
 }

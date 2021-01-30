@@ -1,0 +1,28 @@
+@import "../../styles/config";
+
+.modal-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99;
+	background-color: rgba(#000, 0.3);
+	display: grid;
+	place-items: center;
+	.modal-body {
+		min-height: 222px;
+		width: 432px;
+		max-width: 88vw;
+		border-radius: 5px;
+		background-color: #fff;
+		box-shadow: 0 4px 8px rgba(#000, 0.3);
+		background-color: #fff;
+		@include custom-scrollbar;
+		display: grid;
+		place-items: center;
+		text-align: center;
+		font-size: 18px;
+		padding: 18px 14px;
+	}
+}
